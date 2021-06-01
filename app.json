@@ -9,7 +9,7 @@
     "repository": "https://github.com/CyberBoyAyush/ShortLinkBot",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token",
+            "description": "Your Telegram Bot Token",
             "value": ""
         },
         "API_ID": {
@@ -21,12 +21,12 @@
             "value": ""
         },
         "API_KEY": {
-            "description": "Get API key from https://go4link.in/member/tools/api",
-            "required": false
+            "description": "Get API key from Website You Want To Short Link With.",
+            "value": ""
         },
         "SITE_API_URL": {
-            "description": "Enter The Site Api Url Like https://gplinks.in/api",
-            "value": "https://gplinks.in/api"
+            "description": "Enter The Site Api Url Of Website You Want To Short With Like https://gplinks.in/api or https://urlshortx.com/api",
+            "value": ""
         }
     },
     "addons": [],

@@ -8,7 +8,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN')
 API_KEY = environ.get('API_KEY', 'b98b83211a6398f434379ce1b98e45af81e484b7')
 SITE_API_URL = environ.get('SITE_API_URL')
 
-bot = Client('go4link bot',
+bot = Client('ShortLinkBot',
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
