@@ -1,6 +1,6 @@
 from os import environ
 import aiohttp
-from pyrogram import Client, filters
+from pyrogram import Client, filters, InlineKeyboardButton, InlineKeyboardMarkup
 
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
@@ -19,8 +19,8 @@ bot = Client('go4link bot',
 @bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(
-        f"**𝗛𝗘𝗟𝗟𝗢🎈{message.chat.first_name}!**\n\n"
-        "𝗜'𝗺 𝐆𝐨𝟒𝐋𝐢𝐧𝐤 𝗯𝗼𝘁. 𝗝𝘂𝘀𝘁 𝘀𝗲𝗻𝗱 𝗺𝗲 𝗹𝗶𝗻𝗸 𝗮𝗻𝗱 𝗴𝗲𝘁 𝗦𝗵𝗼𝗿𝘁𝗲𝗻𝗲𝗱 𝗨𝗥𝗟. \n\n 𝗧𝗵𝗶𝘀 𝗕𝗼𝘁 𝗜𝘀 𝗠𝗮𝗱𝗲 𝗕𝘆 @CyberBoyAyush💖")
+        f"**Hello!!💛{message.chat.first_name}!**\n\n"
+        "I am 𝐒𝐡𝐨𝐫𝐭𝐋𝐢𝐧𝐤𝐁𝐨𝐭. Send Me Any Short Link, I Will Convert It Into Short Link. \n\n This Bot Is Made By @CyberBoyAyush💖\n\nSource: [Click Here](https;//github.com/cyberboyayush/ShortLinkBot)")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
@@ -36,6 +36,8 @@ async def link_handler(bot, message):
 async def get_shortlink(link):
     url = SITE_API_URL
     params = {'api': API_KEY, 'url': link}
+    button = [[InlineKeyboardButton("Link 🔗", url=short_link)]]
+    markup = InlineKeyboardMarkup(button)
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
