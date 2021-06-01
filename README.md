@@ -2,7 +2,7 @@
 A Telegram Bot Made Using Python Which Can Short Links From Telegram Itself Using Shortner's Dev API.
 
 ## Deploy Your Bot
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/ShortLinkBot)
 
 ## Required Vars
 - `API_ID` = Telegram User API ID From https://my.telegram.org
