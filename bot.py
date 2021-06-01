@@ -1,6 +1,6 @@
 from os import environ
 import aiohttp
-from pyrogram import Client, filters, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client, filtersup
 
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
@@ -28,7 +28,7 @@ async def link_handler(bot, message):
     link = message.matches[0].group(0)
     try:
         short_link = await get_shortlink(link)
-        await message.reply(f'Here is your👉 [Short Link🎈]({short_link})', quote=True)
+        await message.reply(f'Here Is Your ➤ [Short Link]({short_link})', quote=True)
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
 
@@ -36,8 +36,6 @@ async def link_handler(bot, message):
 async def get_shortlink(link):
     url = SITE_API_URL
     params = {'api': API_KEY, 'url': link}
-    button = [[InlineKeyboardButton("Link 🔗", url=short_link)]]
-    markup = InlineKeyboardMarkup(button)
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
