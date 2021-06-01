@@ -1,0 +1,44 @@
+{
+    "name": "ShortLinkBot",
+    "description": "Make short link by using Link Shortner API key",
+    "keywords": [
+        "telegram",
+        "gplink"
+    ],
+    "website": "https://github.com/CyberBoyAyush/ShortLinkBot",
+    "repository": "https://github.com/CyberBoyAyush/ShortLinkBot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_KEY": {
+            "description": "Get API key from https://go4link.in/member/tools/api",
+            "required": false
+        },
+        "SITE_API_URL": {
+            "description": "Enter The Site Api Url Like https://gplinks.in/api",
+            "value": "https://gplinks.in/api"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
