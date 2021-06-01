@@ -20,7 +20,7 @@ bot = Client('go4link bot',
 async def start(bot, message):
     await message.reply(
         f"**Hello!!💛{message.chat.first_name}!**\n\n"
-        "I am 𝐒𝐡𝐨𝐫𝐭𝐋𝐢𝐧𝐤𝐁𝐨𝐭. Send Me Any Short Link, I Will Convert It Into Short Link. \n\n This Bot Is Made By @CyberBoyAyush💖\n\nSource: [Click Here](https;//github.com/cyberboyayush/ShortLinkBot)")
+        "I am 𝐒𝐡𝐨𝐫𝐭𝐋𝐢𝐧𝐤𝐁𝐨𝐭. Send Me Any Short Link, I Will Convert It Into Short Link. \n\n This Bot Is Made By @CyberBoyAyush💖\n\nSource: [Click Here](https://github.com/cyberboyayush/ShortLinkBot)")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
